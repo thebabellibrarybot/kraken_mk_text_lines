@@ -5,13 +5,16 @@ import numpy as np
 
 s3 = boto3.client('s3')
 
+"""
+for prac
+
 def show_coords(image, coords):
     for coord in coords:
         x, y, w, h = coord
         cv2.rectangle(image, (x, y), (w, h), (0, 255, 0), 2)
     cv2.imshow("image", image)
     cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    cv2.destroyAllWindows()"""
 
 def kraken_kropper(img, coords, bucket_name, original_name):
     s3_urls = []
