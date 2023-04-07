@@ -39,7 +39,7 @@ def lambda_handler(event, context):
     img_obj = s3.get_object(Bucket=buk, Key=key)
     img_data = img_obj['Body'].read()
     img = cv2.imdecode(np.frombuffer(img_data, np.uint8), cv2.IMREAD_COLOR)
-    out = kraken_kropper(img, coords, buk, key)
+    out = kraken_kropper(img, coords, 'thisthatbukfornolaslines', key)
     return out
 
 
